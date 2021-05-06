@@ -1,0 +1,31 @@
+{
+  "name": "Post",
+  "fields": [
+    {
+      "fieldName": "imagen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "like",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "usuario",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "usuario"
+    }
+  ],
+  "entityTableName": "post",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210506130426"
+}

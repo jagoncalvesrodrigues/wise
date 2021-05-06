@@ -1,0 +1,29 @@
+{
+  "wiseApp": {
+    "accesorio": {
+      "home": {
+        "title": "Accesorios",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Accesorio",
+        "createOrEditLabel": "Create or edit a Accesorio",
+        "notFound": "No Accesorios found"
+      },
+      "created": "A new Accesorio is created with identifier {{ param }}",
+      "updated": "A Accesorio is updated with identifier {{ param }}",
+      "deleted": "A Accesorio is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Accesorio {{ id }}?"
+      },
+      "detail": {
+        "title": "Accesorio"
+      },
+      "id": "ID",
+      "stock": "Stock",
+      "imagen": "Imagen",
+      "talla": "Talla",
+      "color": "Color",
+      "coleccion": "Coleccion",
+      "venta": "Venta"
+    }
+  }
+}

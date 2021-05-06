@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="sudadera">
+      <h2 data-cy="sudaderaDetailsHeading"><span jhiTranslate="wiseApp.sudadera.detail.title">Sudadera</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ sudadera.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.sudadera.stock">Stock</span></dt>
+        <dd>
+          <span>{{ sudadera.stock }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.sudadera.imagen">Imagen</span></dt>
+        <dd>
+          <span>{{ sudadera.imagen }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.sudadera.talla">Talla</span></dt>
+        <dd>
+          <span>{{ sudadera.talla }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.sudadera.color">Color</span></dt>
+        <dd>
+          <span>{{ sudadera.color }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.sudadera.coleccion">Coleccion</span></dt>
+        <dd>
+          <span>{{ sudadera.coleccion }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.sudadera.venta">Venta</span></dt>
+        <dd>
+          <div *ngIf="sudadera.venta">
+            <a [routerLink]="['/venta', sudadera.venta?.id, 'view']">{{ sudadera.venta?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/sudadera', sudadera.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

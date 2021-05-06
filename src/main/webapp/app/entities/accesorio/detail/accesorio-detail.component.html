@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="accesorio">
+      <h2 data-cy="accesorioDetailsHeading"><span jhiTranslate="wiseApp.accesorio.detail.title">Accesorio</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ accesorio.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.accesorio.stock">Stock</span></dt>
+        <dd>
+          <span>{{ accesorio.stock }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.accesorio.imagen">Imagen</span></dt>
+        <dd>
+          <span>{{ accesorio.imagen }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.accesorio.talla">Talla</span></dt>
+        <dd>
+          <span>{{ accesorio.talla }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.accesorio.color">Color</span></dt>
+        <dd>
+          <span>{{ accesorio.color }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.accesorio.coleccion">Coleccion</span></dt>
+        <dd>
+          <span>{{ accesorio.coleccion }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.accesorio.venta">Venta</span></dt>
+        <dd>
+          <div *ngIf="accesorio.venta">
+            <a [routerLink]="['/venta', accesorio.venta?.id, 'view']">{{ accesorio.venta?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/accesorio', accesorio.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

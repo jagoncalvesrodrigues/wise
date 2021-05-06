@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="camiseta">
+      <h2 data-cy="camisetaDetailsHeading"><span jhiTranslate="wiseApp.camiseta.detail.title">Camiseta</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ camiseta.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.camiseta.stock">Stock</span></dt>
+        <dd>
+          <span>{{ camiseta.stock }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.camiseta.imagen">Imagen</span></dt>
+        <dd>
+          <span>{{ camiseta.imagen }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.camiseta.talla">Talla</span></dt>
+        <dd>
+          <span>{{ camiseta.talla }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.camiseta.color">Color</span></dt>
+        <dd>
+          <span>{{ camiseta.color }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.camiseta.coleccion">Coleccion</span></dt>
+        <dd>
+          <span>{{ camiseta.coleccion }}</span>
+        </dd>
+        <dt><span jhiTranslate="wiseApp.camiseta.venta">Venta</span></dt>
+        <dd>
+          <div *ngIf="camiseta.venta">
+            <a [routerLink]="['/venta', camiseta.venta?.id, 'view']">{{ camiseta.venta?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/camiseta', camiseta.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

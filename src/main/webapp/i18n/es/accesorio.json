@@ -1,0 +1,29 @@
+{
+  "wiseApp": {
+    "accesorio": {
+      "home": {
+        "title": "Accesorios",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Accesorio",
+        "createOrEditLabel": "Crear o editar Accesorio",
+        "notFound": "Ningún Accesorios encontrado"
+      },
+      "created": "Un nuevo Accesorio ha sido creado con el identificador {{ param }}",
+      "updated": "Un Accesorio ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Accesorio ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Accesorio {{ id }}?"
+      },
+      "detail": {
+        "title": "Accesorio"
+      },
+      "id": "ID",
+      "stock": "Stock",
+      "imagen": "Imagen",
+      "talla": "Talla",
+      "color": "Color",
+      "coleccion": "Coleccion",
+      "venta": "Venta"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+
+entity  Usuario{
+ 	nombre String,
+    apellido String,
+    correo String,
+    telefono Integer,
+    direccion String,
+    cp Integer
+}
+entity  Camiseta{
+ 	stock Integer,
+ 	imagen String,
+ 	talla String,
+    color String,
+    coleccion Integer
+}
+entity  Sudadera{
+ 	stock Integer,
+ 	imagen String,
+ 	talla String,
+    color String,
+    coleccion Integer
+}
+entity  Accesorio{
+ 	stock Integer,
+ 	imagen String,
+ 	talla String,
+    color String,
+    coleccion Integer
+}
+entity  Venta{
+ 	importe Double,
+    fecha Instant
+  
+}
+entity  Post{
+ imagen String,
+    like Instant
+}
+relationship OneToMany {
+ 	Usuario to Post
+    Usuario to Venta
+    Venta to Camiseta
+    Venta to Sudadera
+    Venta to Accesorio
+}
+paginate all with pagination
+service all with serviceImpl
+// Set an angular suffix
+// angularSuffix * with mySuffix

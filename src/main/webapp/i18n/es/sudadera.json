@@ -1,0 +1,29 @@
+{
+  "wiseApp": {
+    "sudadera": {
+      "home": {
+        "title": "Sudaderas",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Sudadera",
+        "createOrEditLabel": "Crear o editar Sudadera",
+        "notFound": "Ningún Sudaderas encontrado"
+      },
+      "created": "Un nuevo Sudadera ha sido creado con el identificador {{ param }}",
+      "updated": "Un Sudadera ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Sudadera ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Sudadera {{ id }}?"
+      },
+      "detail": {
+        "title": "Sudadera"
+      },
+      "id": "ID",
+      "stock": "Stock",
+      "imagen": "Imagen",
+      "talla": "Talla",
+      "color": "Color",
+      "coleccion": "Coleccion",
+      "venta": "Venta"
+    }
+  }
+}

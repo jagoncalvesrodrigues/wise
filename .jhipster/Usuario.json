@@ -1,0 +1,53 @@
+{
+  "name": "Usuario",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apellido",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "correo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefono",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "direccion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cp",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "post",
+      "otherEntityRelationshipName": "usuario",
+      "relationshipName": "post"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "venta",
+      "otherEntityRelationshipName": "usuario",
+      "relationshipName": "venta"
+    }
+  ],
+  "entityTableName": "usuario",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210506130421"
+}

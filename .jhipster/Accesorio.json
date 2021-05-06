@@ -1,0 +1,43 @@
+{
+  "name": "Accesorio",
+  "fields": [
+    {
+      "fieldName": "stock",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "imagen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "talla",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "color",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "coleccion",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "venta",
+      "otherEntityRelationshipName": "accesorio",
+      "relationshipName": "venta"
+    }
+  ],
+  "entityTableName": "accesorio",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210506130424"
+}

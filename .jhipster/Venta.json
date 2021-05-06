@@ -1,0 +1,49 @@
+{
+  "name": "Venta",
+  "fields": [
+    {
+      "fieldName": "importe",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "fecha",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "camiseta",
+      "otherEntityRelationshipName": "venta",
+      "relationshipName": "camiseta"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "sudadera",
+      "otherEntityRelationshipName": "venta",
+      "relationshipName": "sudadera"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "accesorio",
+      "otherEntityRelationshipName": "venta",
+      "relationshipName": "accesorio"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "usuario",
+      "otherEntityRelationshipName": "venta",
+      "relationshipName": "usuario"
+    }
+  ],
+  "entityTableName": "venta",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210506130425"
+}
